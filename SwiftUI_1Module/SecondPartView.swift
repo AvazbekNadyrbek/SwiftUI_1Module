@@ -7,9 +7,21 @@
 
 import SwiftUI
 
+private let thumnails: [ImageResource] = [.imgSmall1, .imgSmall2, .imgSmall3]
+
 struct SecondPartView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            ForEach(thumnails, id: \.self) { photo in
+                Image(photo)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 120, height: 120)
+                    .clipped()
+                    .shadow(radius: 3)
+                    .accessibilityLabel("Thumbnails")
+            }
+        }
     }
 }
 

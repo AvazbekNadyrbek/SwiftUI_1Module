@@ -7,12 +7,24 @@
 
 import SwiftUI
 
-struct FirtsPart: View {
+struct FirstPartView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack(alignment: .bottomLeading) {
+            Image(.bigImg)
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: .infinity, maxHeight: 300)
+                .accessibilityLabel("Decorative background image")
+            
+            Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod")
+                .foregroundStyle(.white)
+                .multilineTextAlignment(.leading)
+                .padding(.leading, 30)
+                .padding(.bottom, 40)
+                
+        }
     }
 }
-
 #Preview {
-    FirtsPart()
+    FirstPartView()
 }

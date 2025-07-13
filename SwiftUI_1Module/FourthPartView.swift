@@ -9,7 +9,12 @@ import SwiftUI
 
 struct FourthPartView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, spacing: 10) {
+            Text("About")
+                .font(.callout)
+                .foregroundColor(.secondary)
+            Text("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod")
+        }
     }
 }
 

@@ -9,9 +9,30 @@ import SwiftUI
 
 struct ThirsPartView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(spacing: 40) {
+            reusableLabel(label: "User Name", icon: .icon1)
+            
+            reusableLabel(label: "25", icon: .icon2)
+        }
+
     }
 }
+
+struct reusableLabel: View {
+    let label: String
+    let icon: ImageResource
+    
+    var body: some View {
+        Label {
+            Text(label)
+                .font(.title2)
+                .fontWeight(.bold)
+        } icon: {
+            Image(icon)
+        }
+    }
+}
+
 
 #Preview {
     ThirsPartView()
