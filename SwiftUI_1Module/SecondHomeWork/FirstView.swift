@@ -7,12 +7,17 @@
 
 import SwiftUI
 
-struct FirstView: View {
+struct HeadTextView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text("Hello User")
+                .font(.callout)
+            Text("Find your specialist")
+                .font(.title)
+        }
     }
 }
 
 #Preview {
-    FirstView()
+    HeadTextView()
 }

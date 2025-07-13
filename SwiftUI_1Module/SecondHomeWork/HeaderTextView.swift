@@ -9,7 +9,13 @@ import SwiftUI
 
 struct HeaderTextView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("Top Doctor")
+                .font(.title.bold())
+            Spacer()
+            Text("See all")
+                .foregroundStyle(.colorIcon2)
+        }
     }
 }
 

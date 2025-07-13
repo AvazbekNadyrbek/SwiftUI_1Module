@@ -4,15 +4,16 @@
 //
 //  Created by Авазбек Надырбек уулу on 13.07.25.
 //
-
+import Foundation
 import SwiftUI
 
-struct ColorsExtentions: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+extension Color {
+    static let colorIcon = IconColor()
 }
 
-#Preview {
-    ColorsExtentions()
+struct IconColor {
+    let firstIcon = Color("ColorIcon1")
+    let secondIcon = Color("ColorIcon2")
+    let thirdIcon = Color("ColorIcon3")
 }
+

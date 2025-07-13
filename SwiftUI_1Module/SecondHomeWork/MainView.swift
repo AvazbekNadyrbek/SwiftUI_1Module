@@ -9,7 +9,18 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView() {
+            VStack(alignment: .leading, spacing: 40) {
+                TopView()
+                HeadTextView()
+                IconMenuView(iconSize: 50)
+                HeaderTextView()
+                MainContent()
+                MainContent()
+            }
+            .padding(30)
+        }
+        .background(.gray.opacity(0.2))     // gray background2)     // blue background
     }
 }
 
