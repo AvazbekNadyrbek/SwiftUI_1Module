@@ -23,6 +23,9 @@ struct MainPartView: View {
                 
                 FourthPartView()
                     .padding(.bottom, 16)
+                
+                FithsPartView()
+                    .frame(maxWidth: .infinity, alignment: .center)
             }
             .padding(.horizontal, 16)
         }
